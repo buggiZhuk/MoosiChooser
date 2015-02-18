@@ -11,7 +11,7 @@
 class Player
 {
 private:
-    Player();
+
 
 private:
     GstElement *mSource;
@@ -20,15 +20,18 @@ private:
     GstElement *mSink;
     GstElement *mPipeline;
 public:
-    static Player& getInstance();
     ~Player();
+    /**
+     * @brief init
+     * @return
+     * TODO: needde to be refactored. Should be called from constructor of object
+     */
     bool init();
 
-private:
-    static void *startGtkLoop(void*);
 //interface
 public:
-    void play(std::string &path);
+    Player();
+    void play(const std::string &path);
     void pause();
     void stop();
 

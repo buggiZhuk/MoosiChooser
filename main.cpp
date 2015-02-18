@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "controller.h"
+#include "Player/playercontroller.h"
 #include <QApplication>
 #include <string>
 #include <map>
@@ -7,9 +7,10 @@
 
 int main(int argc, char *argv[])
 {
+    std::cout<<argv[0]<<std::endl;
     QApplication a(argc, argv);
     MainWindow w;
-    Controller controller;
+    PlayerController controller;
     QObject::connect(&w, SIGNAL(play_request(std::string)),  &controller, SLOT(play_request(std::string)));
     w.show();
 

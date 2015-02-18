@@ -12,25 +12,31 @@ TARGET = MoosiChooser
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
+SOURCES += main.cpp \
         mainwindow.cpp \
-    controller.cpp \
-    player.cpp \
-    gststreemdiscoverer.cpp \
-    test.cpp \
-    gstcallbacks.cpp
+    gstcallbacks.cpp \
+    UI/filelist.cpp \
+    Player/playercontroller.cpp \
+    Player/player.cpp \
+    Player/contenttypdiscoverer.cpp \
+    Helpers/classidentifier.cpp
 
 HEADERS  += mainwindow.h \
-    controller.h \
-    player.h \
-    gststreemdiscoverer.h \
-    test.h \
-    gstcallbacks.h
+    gstcallbacks.h \
+    UI/filelist.h \
+    Player/playercontroller.h \
+    Player/datatypes.h \
+    Player/player.h \
+    Player/contenttypdiscoverer.h \
+    Helpers/classidentifier.h
 
 FORMS    += mainwindow.ui
 
 CONFIG += c++11
 
 unix: CONFIG += link_pkgconfig
-unix: PKGCONFIG += gstreamer-1.0
+
+unix: PKGCONFIG += gstreamer-0.10
+unix: PKGCONFIG += gstreamer-plugins-base-0.10 \
+                   gstreamer-pbutils-0.10
 

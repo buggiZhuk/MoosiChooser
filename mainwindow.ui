@@ -14,21 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>391</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>300</y>
+      <x>30</x>
+      <y>260</y>
       <width>71</width>
       <height>27</height>
      </rect>
@@ -37,17 +27,53 @@
      <string>play</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QSlider" name="horizontalSlider">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>310</y>
-      <width>99</width>
-      <height>27</height>
+      <x>10</x>
+      <y>290</y>
+      <width>711</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>330</y>
+      <width>67</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>0:00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0:00:00</string>
+    </property>
+   </widget>
+   <widget class="FileList" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -72,6 +98,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>FileList</class>
+   <extends>QListWidget</extends>
+   <header>UI/filelist.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

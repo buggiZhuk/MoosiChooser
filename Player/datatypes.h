@@ -1,5 +1,7 @@
-#ifndef DATATYPES
-#define DATATYPES
+#pragma once
 
-#endif // DATATYPES
-
+enum Codec
+{
+    MP3,
+    FLAC
+};
