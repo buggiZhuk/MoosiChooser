@@ -16,6 +16,7 @@ private:
 private:
     GstElement *mSource;
     GstElement *mConvert;
+    GstElement *mParse;
     GstElement *mSink;
     GstElement *mPipeline;
 public:
@@ -33,6 +34,7 @@ public:
 
 private:
     static void state_changed_cb (GstBus *bus, GstMessage *msg, Player *data);
+    static void error_cb (GstBus *bus, GstMessage *msg, Player *data);
 
 };
 
